@@ -20,4 +20,8 @@ app.get('/webhook/', function(req, res) {
 		res.send(res.query['hub.challenge']);
 	}
 	res.send('wrong token');
+}); 
+
+app.listen(app.get('port'),function(){ 
+  console.log("running: port");
 });
