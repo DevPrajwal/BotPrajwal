@@ -16,10 +16,10 @@ app.get('/', function(req, res) {
 });
 
 app.get('/webhook/', function(req, res) {
-	if (req.query['hub.verify_token'] == "devPrajwal") {
+	if (req.query['hub.verify_token'] === "devPrajwal") {
 		res.send(res.query['hub.challenge']);
 	}
-	res.send("wrong token" );
+	res.send("wrong token");
 }); 
 
 app.listen(app.get('port'),function(){ 
